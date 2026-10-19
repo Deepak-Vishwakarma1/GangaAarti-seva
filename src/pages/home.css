@@ -375,6 +375,7 @@
 }
 .home-gallery__dots button.is-active { background: #d96c17; }
 
+
 .home-faq {
   width: min(900px, 100%);
   margin: 82px auto 10px;

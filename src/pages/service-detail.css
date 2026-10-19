@@ -62,7 +62,6 @@
 .service-contact__content { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; }
 .service-contact__option--whatsapp .service-contact__icon { background: #e8f7ed; color: #168447; }
 .service-contact__label { margin-bottom: 7px; color: #728092; font-size: 1rem; }
-.service-contact__whatsapp-mark { margin-right: 6px; color: #168447; font-size: 1.15em; vertical-align: -0.12em; }
 .service-contact__option strong { color: #17354a; font-size: clamp(1.05rem, 1.7vw, 1.28rem); line-height: 1.4; overflow-wrap: anywhere; }
 .service-contact__option .service-contact__email { font-size: clamp(0.76rem, 1.05vw, 0.98rem); letter-spacing: -0.035em; white-space: nowrap; overflow-wrap: normal; }
 .service-contact__hint { margin-top: 10px; color: #728092; font-size: 0.95rem; line-height: 1.5; }

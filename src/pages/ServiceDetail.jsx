@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
 import PageHero from "../components/shared/PageHero";
 import "./service-detail.css";
@@ -311,7 +310,7 @@ export default function ServiceDetail() {
               rel="noopener noreferrer"
             >
               <span className="service-contact__content">
-                <span className="service-contact__label"><FaWhatsapp className="service-contact__whatsapp-mark" aria-hidden="true" />WhatsApp</span>
+                <span className="service-contact__label">WhatsApp</span>
                 <strong>Message Ganga Aarti Seva</strong>
                 <span className="service-contact__hint">Usually the fastest way</span>
               </span>

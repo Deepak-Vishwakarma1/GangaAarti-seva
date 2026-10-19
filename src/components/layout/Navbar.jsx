@@ -20,6 +20,7 @@ const serviceLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const servicesDropdownRef = useRef(null);
+  const servicesCloseTimerRef = useRef(null);
 
   useEffect(() => {
     function closeServicesOnOutsideTap(event) {
@@ -32,7 +33,10 @@ export default function Navbar() {
     }
 
     document.addEventListener("pointerdown", closeServicesOnOutsideTap);
-    return () => document.removeEventListener("pointerdown", closeServicesOnOutsideTap);
+    return () => {
+      document.removeEventListener("pointerdown", closeServicesOnOutsideTap);
+      window.clearTimeout(servicesCloseTimerRef.current);
+    };
   }, []);
 
   function closeServicesMenu(event) {
@@ -43,13 +47,17 @@ export default function Navbar() {
 
   function handleServicesPointerEnter(event) {
     if (window.matchMedia("(hover: hover) and (min-width: 901px)").matches) {
+      window.clearTimeout(servicesCloseTimerRef.current);
       event.currentTarget.open = true;
     }
   }
 
   function handleServicesPointerLeave(event) {
     if (window.matchMedia("(hover: hover) and (min-width: 901px)").matches) {
-      event.currentTarget.open = false;
+      const dropdown = event.currentTarget;
+      servicesCloseTimerRef.current = window.setTimeout(() => {
+        dropdown.open = false;
+      }, 2000);
     }
   }
 
