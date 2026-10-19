@@ -1,0 +1,103 @@
+.about-page {
+  flex: 1;
+  background: #fffaf5;
+  color: #65717a;
+}
+
+.about-content {
+  width: min(100% - 48px, 1080px);
+  margin: 0 auto;
+  padding: 52px 0 82px;
+}
+
+.about-intro {
+  display: grid;
+  gap: 22px;
+  margin-bottom: 36px;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid #eadfd4;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff 0%, #fff7ef 100%);
+  box-shadow: 0 12px 30px rgb(23 53 74 / 5%);
+}
+
+.about-intro p,
+.about-list p {
+  color: #667483;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.about-section { margin-top: 22px; padding: clamp(22px, 3.5vw, 34px); border: 1px solid #eadfd4; border-radius: 18px; background: #fff; box-shadow: 0 8px 24px rgb(23 53 74 / 4%); }
+.about-section h2 {
+  margin: 0 0 21px;
+  color: #17354a;
+  font-size: clamp(1.3rem, 2.3vw, 1.6rem);
+  font-weight: 780;
+  letter-spacing: -0.025em;
+}
+
+.about-list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-list li { position: relative; padding-left: 24px; }
+.about-list li::before {
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #df690f;
+  content: "";
+}
+.about-list strong { color: #17354a; font-weight: 780; }
+
+.about-list--steps { gap: 17px; }
+.about-list--steps li { display: grid; grid-template-columns: 31px 1fr; align-items: start; gap: 13px; padding-left: 0; }
+.about-list--steps li::before { display: none; }
+.about-step-number {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: #df690f;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-section--last { margin-bottom: 30px; }
+.about-closing {
+  padding: 24px 28px;
+  border: 1px solid #efd8c1;
+  border-radius: 16px;
+  background: #f8ede2;
+  color: #17354a;
+  font-size: 1.2rem;
+  font-weight: 780;
+  line-height: 1.5;
+}
+
+.about-closing strong { color: #d95e09; }
+
+@media (max-width: 600px) {
+  .about-content { width: min(100% - 36px, 560px); padding: 38px 0 52px; }
+  .about-intro { gap: 17px; margin-bottom: 22px; padding: 20px; border-radius: 15px; }
+  .about-intro p, .about-list p { font-size: 0.98rem; line-height: 1.62; }
+  .about-section { margin-top: 14px; padding: 20px; border-radius: 15px; }
+  .about-section h2 { margin-bottom: 16px; }
+  .about-list { gap: 14px; }
+  .about-list li { padding-left: 20px; }
+  .about-list--steps li { grid-template-columns: 28px 1fr; gap: 10px; padding-left: 0; }
+  .about-step-number { width: 28px; height: 28px; }
+  .about-section--last { margin-bottom: 20px; }
+  .about-closing { padding: 20px; font-size: 1.05rem; }
+}
