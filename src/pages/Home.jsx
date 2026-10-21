@@ -38,7 +38,7 @@ const homeServices = [
 ];
 
 const faqs = [
-  ["What is Ganga Aarti Seva?", "A local Varanasi team that arranges your Ganga Aarti, Kashi Bhraman, puja, astrology, and events."],
+  ["What is Ganga Aarti Seva?", "Ganga Aarti Seva is run by Acharya Ankit Tiwari, a Jyotishacharya and Ganga Aarti event planner, with a local Varanasi team. We help arrange Ganga Aarti, Kashi visits, puja, astrology, and religious events."],
   ["How can I book your services?", "Click Book Aarti, or message us on WhatsApp or call us. We share the plan and cost first."],
   ["What time does the Ganga Aarti start?", "The evening Ganga Aarti at Dashashwamedh Ghat starts around sunset. The exact time changes with the season and special events, so contact us to confirm your visit date."],
   ["Will I know the cost before I pay?", "Yes. We share the full cost first, and there are no hidden charges."],
@@ -63,6 +63,29 @@ export default function Home() {
       setActiveSlide((current) => (current + 1) % homeSlides.length);
     }, 6000);
     return () => window.clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    let closeTimer;
+
+    function closeOpenFaqs() {
+      document
+        .querySelectorAll(".home-faq__item[open]")
+        .forEach((item) => {
+          item.open = false;
+        });
+    }
+
+    function scheduleFaqClose() {
+      window.clearTimeout(closeTimer);
+      closeTimer = window.setTimeout(closeOpenFaqs, 2500);
+    }
+
+    window.addEventListener("scroll", scheduleFaqClose, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", scheduleFaqClose);
+      window.clearTimeout(closeTimer);
+    };
   }, []);
 
   return (
@@ -108,12 +131,16 @@ export default function Home() {
             alt={homeSlides[1].alt}
           />
           <div className="home-about__copy">
-            <p>
-              Ganga Aarti Seva is a local team based in Varanasi. We help you
-              experience the city, its ghats, and its traditions with care. From
-              Ganga Aarti Darshan and Kashi visits to puja services, our team
-              takes care of the details so you can focus on your faith and
-              family.
+            <p className="home-about__eyebrow">The person behind Ganga Aarti Seva</p>
+            <h2>Acharya Ankit Tiwari</h2>
+            <p className="home-about__role">Jyotishacharya &amp; Ganga Aarti Event Planner</p>
+            <div className="home-about__divider" aria-hidden="true" />
+            <p className="home-about__founder-description">
+              Ganga Aarti Seva is a local team based in Varanasi. Acharya Ankit
+              Tiwari brings together Jyotish guidance and thoughtful planning
+              for Ganga Aarti events. From Aarti darshan and Kashi visits to
+              puja services, the team takes care of the details so you can
+              focus on your faith and family.
             </p>
             <Link className="home-about__more" to="/about">
               More about us
@@ -138,28 +165,6 @@ export default function Home() {
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="home-reasons" aria-labelledby="home-reasons-title">
-        <div className="home-reasons__top">
-          <header className="home-reasons__intro">
-            <h2 id="home-reasons-title">Why Choose Us?</h2>
-            <p>We help make your visit to Kashi easy and meaningful with local guidance, trusted people, and thoughtful planning rooted in respect for tradition.</p>
-            <h3>How We Help You</h3>
-          </header>
-          <div className="home-reasons__brand">
-            <img className="home-reasons__logo" src="/faviconbr.png" alt="Ganga Aarti Seva logo" loading="lazy" />
-          </div>
-        </div>
-        <div className="home-reasons__grid">
-          {reasonsToChooseUs.map(([title, description]) => (
-            <article className="home-reason" key={title}>
-              <span className="home-reason__check" aria-hidden="true">✓</span>
-              <h3>{title}</h3>
-              <p>{description}</p>
-            </article>
           ))}
         </div>
       </section>
@@ -210,13 +215,47 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-reasons" aria-labelledby="home-reasons-title">
+        <div className="home-reasons__top">
+          <header className="home-reasons__intro">
+            <h2 id="home-reasons-title">Why Choose Us?</h2>
+            <p>We help make your visit to Kashi easy and meaningful with local guidance, trusted people, and thoughtful planning rooted in respect for tradition.</p>
+            <h3>How We Help You</h3>
+          </header>
+          <div className="home-reasons__brand">
+            <img className="home-reasons__logo" src="/faviconbr.png" alt="Ganga Aarti Seva logo" loading="lazy" />
+          </div>
+        </div>
+        <div className="home-reasons__grid">
+          {reasonsToChooseUs.map(([title, description]) => (
+            <article className="home-reason" key={title}>
+              <span className="home-reason__check" aria-hidden="true">✓</span>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="home-faq" aria-labelledby="home-faq-title">
         <header className="home-faq__heading">
           <h2 id="home-faq-title">Ganga Aarti Seva FAQ's</h2>
         </header>
         <div className="home-faq__list">
           {faqs.map(([question, answer]) => (
-            <details className="home-faq__item" key={question}>
+            <details
+              className="home-faq__item"
+              key={question}
+              onToggle={(event) => {
+                if (event.currentTarget.open) {
+                  event.currentTarget.parentElement
+                    .querySelectorAll(".home-faq__item")
+                    .forEach((item) => {
+                      if (item !== event.currentTarget) item.open = false;
+                    });
+                }
+              }}
+            >
               <summary>{question}</summary>
               <p>{answer}</p>
             </details>

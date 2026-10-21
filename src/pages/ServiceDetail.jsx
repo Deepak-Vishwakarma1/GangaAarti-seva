@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
 import PageHero from "../components/shared/PageHero";
 import "./service-detail.css";
@@ -23,8 +24,8 @@ const serviceDetails = {
       {
         eyebrow: "Wedding celebration",
         title: "Ganga Aarti Wedding Event",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/A_ritual_at_marriage_ceremony.jpg/960px-A_ritual_at_marriage_ceremony.jpg",
-        alt: "A bride and groom taking part in a wedding ritual with Ganga water",
+        image: "/aarti-images/gangaartiweddignevent.png",
+        alt: "Ganga Aarti ceremony arranged for a wedding celebration in Varanasi",
         description: "Add the devotional atmosphere of Ganga Aarti to your wedding celebration in Varanasi. Tell us your date, guest count, and plans, and we’ll help coordinate the event arrangements.",
       },
     ],
@@ -96,27 +97,31 @@ const serviceDetails = {
       {
         title: "Dashashwamedh Ghat",
         description: "See Varanasi’s best-known Ganga Aarti, performed here every evening.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ganga%20Aarti%20in%20evening%20at%20Dashashwamedh%20ghat%2C%20Varanasi%2002.jpg?width=960",
-        alt: "Priests performing the evening Ganga Aarti at Dashashwamedh Ghat",
+        image: "/aarti-images/dashashwamedh-ghat-ganga-aarti-varanasi.jpg",
+        alt: "Ganga Aarti performed at Dashashwamedh Ghat, Varanasi",
+        imageTitle: "Dashashwamedh Ghat Ganga Aarti Varanasi",
       },
       {
         title: "Assi Ghat",
         description: "Choose a calmer riverside experience and the morning Subah-e-Banaras programme.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Morning%20view%20of%20Assi%20Ghat%20in%20Varanasi.jpg?width=960",
-        alt: "Morning light and devotees at Assi Ghat in Varanasi",
+        image: "/aarti-images/assi-ghat-boats-varanasi.jpg",
+        alt: "Boats at Assi Ghat, Varanasi at sunrise",
+        imageTitle: "Assi Ghat Subah-e-Banaras Varanasi",
       },
       {
         title: "Namo Ghat",
         description: "A newer, modern ghat that can offer a less-crowded setting for your visit.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Namo%20Ghat%20%2C%20Varanasi.jpg?width=960",
-        alt: "Namo Ghat riverside promenade in Varanasi",
+        image: "/aarti-images/namo-ghat-varanasi.jpg",
+        alt: "Namo Ghat riverside steps in Varanasi",
+        imageTitle: "Namo Ghat Varanasi",
       },
       {
         title: "Boat Planning for Aarti",
         description: "Ask us to plan a boat view of the Aarti. Boat availability, boarding point, and timing depend on the date and river conditions, so please enquire in advance.",
         featured: true,
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Boat%20Varanasi.jpg?width=960",
-        alt: "Boats on the Ganges beside the Varanasi ghats",
+        image: "/aarti-images/ganga-aarti-boat-ride-varanasi.jpg",
+        alt: "Tourists on a boat on the Ganges for Ganga Aarti view, Varanasi",
+        imageTitle: "Boat Ride for Ganga Aarti Varanasi",
       },
     ],
     details: [
@@ -248,7 +253,15 @@ export default function ServiceDetail() {
             <div className="service-highlights__grid">
               {service.highlights.map((highlight) => (
                 <article className={`service-highlight${highlight.featured ? " service-highlight--featured" : ""}`} key={highlight.title}>
-                  {highlight.image && <img className="service-highlight__image" src={highlight.image} alt={highlight.alt} loading="lazy" />}
+                  {highlight.image && (
+                    <img
+                      className={`service-highlight__image${highlight.title === "Dashashwamedh Ghat" ? " service-highlight__image--full" : ""}`}
+                      src={highlight.image}
+                      alt={highlight.alt}
+                      title={highlight.imageTitle}
+                      loading="lazy"
+                    />
+                  )}
                   <h3>{highlight.title}</h3>
                   <p>{highlight.description}</p>
                 </article>
@@ -309,6 +322,9 @@ export default function ServiceDetail() {
               target="_blank"
               rel="noopener noreferrer"
             >
+              <span className="service-contact__icon">
+                <FaWhatsapp aria-hidden="true" />
+              </span>
               <span className="service-contact__content">
                 <span className="service-contact__label">WhatsApp</span>
                 <strong>Message Ganga Aarti Seva</strong>

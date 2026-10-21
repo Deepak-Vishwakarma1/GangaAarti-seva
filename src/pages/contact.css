@@ -117,12 +117,18 @@
   color: inherit;
   text-align: left;
   text-decoration: none;
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .contact-card:hover {
   transform: translateY(-2px);
+  border-color: #e9b58e;
   box-shadow: 0 16px 34px rgb(28 51 67 / 9%);
+}
+
+.contact-card[href^="https://wa.me"] .contact-card__icon {
+  background: #fff2e5;
+  color: #d96c17;
 }
 
 .contact-card__icon {

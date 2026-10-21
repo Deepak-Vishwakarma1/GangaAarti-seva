@@ -43,6 +43,23 @@ export default function About() {
           <p>Ganga Aarti Seva is a local team based in Varanasi. We know the city, its ghats, and its traditions well. Our goal is simple: to take care of the details, so you can focus on your faith and your family. Whether you come alone, with your parents, or with a big group, we make the trip smooth and meaningful.</p>
         </div>
 
+        <section className="about-founder" aria-labelledby="about-founder-title">
+          <div className="about-founder__photo">
+            <img
+              className="about-founder__image"
+              src="/Galary/AcharyaAnkittiwari.png"
+              alt="Acharya Ankit Tiwari, Jyotishacharya and Ganga Aarti event planner"
+              loading="lazy"
+            />
+          </div>
+          <div className="about-founder__copy">
+            <p className="about-founder__eyebrow">The person behind Ganga Aarti Seva</p>
+            <h2 id="about-founder-title">Acharya Ankit Tiwari</h2>
+            <p className="about-founder__role">Jyotishacharya &amp; Ganga Aarti Event Planner</p>
+            <p>With a deep understanding of Varanasi’s spiritual traditions, Acharya Ankit Tiwari helps guests plan meaningful Ganga Aarti experiences and traditional ceremonies with personal care.</p>
+          </div>
+        </section>
+
         <section className="about-section">
           <h2>What we offer</h2>
           <BulletList items={offerings} />
@@ -59,7 +76,7 @@ export default function About() {
         <p className="about-closing">
           A trip to Kashi should bring you peace, not problems.
           <br />
-          <strong>हर हर महादेव।</strong> Let us plan your visit.
+          <strong>हर हर गंगे।</strong> Let us plan your visit.
         </p>
       </article>
     </main>

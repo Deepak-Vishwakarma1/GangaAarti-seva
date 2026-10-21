@@ -13,6 +13,7 @@
 .service-offering--editorial .service-offering__body { display: flex; grid-column: 2; grid-row: 1; flex-direction: column; justify-content: center; padding: clamp(24px, 4vw, 52px); }
 .service-offering--editorial:nth-child(even) > img { grid-column: 2; }
 .service-offering--editorial:nth-child(even) .service-offering__body { grid-column: 1; grid-row: 1; }
+.service-offerings__grid--editorial .service-offering:nth-child(2) > img { transform: scale(1.12); }
 .service-offering__eyebrow { margin: 0 0 10px; color: #bd5a14; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
 .service-offering--editorial .service-offering__body h3 { margin-bottom: 12px; font-size: clamp(1.3rem, 2.2vw, 1.75rem); }
 .service-offering--editorial .service-offering__body p:last-child { max-width: 52ch; font-size: 1rem; line-height: 1.75; }
@@ -31,6 +32,7 @@
 .service-highlights__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .service-highlight { min-width: 0; overflow: hidden; padding: 20px; border: 1px solid #ead8c8; border-radius: 15px; background: #fff; }
 .service-highlight__image { display: block; width: calc(100% + 40px); max-width: none; height: 220px; margin: -20px -20px 18px; object-fit: cover; }
+.service-highlight__image--full { aspect-ratio: auto; object-fit: cover; }
 .service-highlight h3 { margin: 0 0 8px; color: #17354a; font-size: 1.05rem; }
 .service-highlight p { margin: 0; color: #5e6a72; font-size: 0.95rem; line-height: 1.65; }
 .service-highlight--featured { border-color: #d86a12; background: #fff3e7; }
@@ -60,7 +62,7 @@
 .service-contact__option:hover { transform: translateY(-4px); border-color: #e9b58e; box-shadow: 0 14px 30px rgb(23 53 74 / 10%); }
 .service-contact__icon { display: grid; width: 52px; height: 52px; margin-bottom: 18px; place-items: center; border-radius: 16px; background: #fff1e4; color: #d96512; font-size: 1.65rem; }
 .service-contact__content { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; }
-.service-contact__option--whatsapp .service-contact__icon { background: #e8f7ed; color: #168447; }
+.service-contact__option--whatsapp .service-contact__icon { background: #fff2e5; color: #d96c17; }
 .service-contact__label { margin-bottom: 7px; color: #728092; font-size: 1rem; }
 .service-contact__option strong { color: #17354a; font-size: clamp(1.05rem, 1.7vw, 1.28rem); line-height: 1.4; overflow-wrap: anywhere; }
 .service-contact__option .service-contact__email { font-size: clamp(0.76rem, 1.05vw, 0.98rem); letter-spacing: -0.035em; white-space: nowrap; overflow-wrap: normal; }
@@ -117,3 +119,4 @@
   .service-detail-page .service-contact__hint { display: block; margin: 3px 0 0; text-align: left; }
   .service-detail-page .service-contact__option .service-contact__email { white-space: normal; overflow-wrap: anywhere; word-break: break-word; }
 }
+

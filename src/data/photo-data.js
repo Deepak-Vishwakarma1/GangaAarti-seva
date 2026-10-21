@@ -1,17 +1,17 @@
 export const homeSlides = [
   {
     id: "ganga-aarti",
-    fileName: "ganga-aarti1.jpg",
-    src: "/aarti-images/ganga-aarti1.jpg",
+    fileName: "gangaartivaranasi.jpg",
+    src: "/aarti-images/gangaartivaranasi.jpg",
     title: "The glow of Ganga Aarti",
     description: "दीपों की रोशनी, माँ गंगा की आरती।",
-    alt: "Ganga Aarti ceremony in Varanasi",
+    alt: "Priests performing Ganga Aarti at the ghats of Varanasi",
     link: "/contact",
   },
   {
     id: "varanasi-tradition",
-    fileName: "ganga-aarti-seva-varanasi.jpeg",
-    src: "/aarti-images/ganga-aarti-seva-varanasi.jpeg",
+    fileName: "ganga-aarti1.jpg",
+    src: "/aarti-images/ganga-aarti1.jpg",
     title: "A timeless Varanasi tradition",
     description: "Some moments in Varanasi stay with you for life. This is one of them.",
     alt: "Priests performing the evening Ganga Aarti at a ghat in Varanasi",

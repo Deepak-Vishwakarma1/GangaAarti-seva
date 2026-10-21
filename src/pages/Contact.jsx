@@ -4,6 +4,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaPhoneAlt,
+  FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
 import { MdAccessTime, MdEmail, MdLocationOn } from "react-icons/md";
@@ -71,8 +72,11 @@ export default function Contact() {
             target="_blank"
             rel="noreferrer"
           >
+            <span className="contact-card__icon">
+              <FaWhatsapp />
+            </span>
             <span className="contact-card__label">WhatsApp</span>
-            <strong>Message Ganga Arti Seva</strong>
+            <strong>Message Ganga Aarti Seva</strong>
             <span className="contact-card__hint">Usually the fastest way</span>
           </a>
           <a className="contact-card" href={`mailto:${email}`}>
