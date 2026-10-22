@@ -2,7 +2,7 @@
 .donate-content { width: min(100% - 48px, 1080px); margin: 0 auto; padding: 52px 0 80px; }
 .donate-panel { max-width: 820px; margin: 0 auto; padding: clamp(26px, 5vw, 54px); border: 1px solid #eadfd4; border-radius: 22px; background: linear-gradient(135deg, #fff 0%, #fff5e9 100%); box-shadow: 0 18px 44px rgb(23 53 74 / 8%); text-align: center; }
 .donate-panel__eyebrow { margin: 0 0 10px; color: #bd5a14; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
-.donate-panel h2 { max-width: 650px; margin: 0 auto 14px; font-size: clamp(1.55rem, 3.6vw, 2.25rem); font-weight: 750; letter-spacing: -0.03em; line-height: 1.2; }
+.donate-panel h2 { max-width: 650px; margin: 0 auto 14px; font-size: clamp(1.55rem, 3.6vw, 2.25rem); font-weight: 400; letter-spacing: normal; line-height: 1.2; }
 .donate-panel > p:not(.donate-panel__eyebrow) { max-width: 590px; margin: 0 auto; color: #65717a; line-height: 1.7; }
 .donate-panel__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
 .donate-panel__actions a { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 8px; padding: 0 21px; border: 1px solid #d86a12; border-radius: 999px; background: #d86a12; color: #fff; font-size: 0.9rem; font-weight: 700; text-decoration: none; transition: background-color 160ms ease, transform 160ms ease; }

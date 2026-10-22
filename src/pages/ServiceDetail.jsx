@@ -38,50 +38,50 @@ const serviceDetails = {
       {
         title: "Kashi Vishwanath Temple and Corridor",
         description: "Dedicated to Lord Shiva, Kashi Vishwanath is one of the city’s most important places of worship. The corridor opens up the approach to the temple and connects the shrine with the riverfront, making it easier to experience both as part of your visit.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kashi%20Vishwanath%20Temple%20in%20Varanasi.jpg?width=960",
-        alt: "Full view of Kashi Vishwanath Temple in Varanasi",
+        image: "/aarti-images/Kashi-Vishwanath-Temple.jpg",
+        alt: "Kashi Vishwanath Temple and corridor entrance in Varanasi, one of the most sacred Lord Shiva temples",
       },
       {
-        title: "Shri Vishwanath Temple, BHU",
+        title: "Shri Vishwanath Temple (New Vishwanath), BHU Varanasi",
         description: "Located within the Banaras Hindu University campus, this tall white temple is also known as the New Vishwanath Temple or Birla Temple. Its peaceful grounds and detailed architecture make it a memorable stop for visitors exploring another side of Varanasi’s spiritual heritage.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/New%20Vishwanath%20Temple%20%28BHU%29.jpg?width=960",
-        alt: "Shri Vishwanath Temple, also known as New Vishwanath Temple, on the BHU campus",
+        image: "/aarti-images/shri-vishwanath-temple-bhu-varanasi.jpg",
+        alt: "White marble Shri Vishwanath Temple inside Banaras Hindu University campus in Varanasi",
       },
       {
-        title: "Dashashwamedh Ghat Ganga Aarti",
+        title: "Dashashwamedh Ghat Ganga Aarti, Varanasi",
         description: "Dashashwamedh is one of Varanasi’s best-known ghats, close to Kashi Vishwanath Temple. In the evening, visitors gather by the river to watch priests offer lamps during Ganga Aarti, accompanied by prayers and devotional music.",
-        image: "/aarti-images/ganga-aarti1.jpg",
-        alt: "Priests performing evening Ganga Aarti at the ghats of Varanasi",
+        image: "/aarti-images/dashashwamedh-ghat-ganga-aarti-varanasi.jpg",
+        alt: "Evening Ganga Aarti at Dashashwamedh Ghat in Varanasi with lamps and devotees by the river",
       },
       {
-        title: "Sankat Mochan Hanuman Temple",
+        title: "Sankat Mochan Hanuman Temple, Varanasi",
         description: "This revered temple is dedicated to Lord Hanuman and is an important stop for devotees visiting Varanasi. Take time for darshan and prayer, and experience the temple’s deeply devotional atmosphere.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sankat%20Mochan%20hanuman%20mandir%20%2CVaranasi.jpg?width=960",
-        alt: "Entrance of Sankat Mochan Hanuman Temple in Varanasi",
+        image: "/aarti-images/sankat-mochan-hanuman-temple-varanasi.jpg",
+        alt: "Sankat Mochan Hanuman Temple in Varanasi, a revered temple dedicated to Lord Hanuman",
       },
       {
-        title: "Durga Kund Temple",
+        title: "Durga Kund Temple, Varanasi",
         description: "The striking red Durga Temple is dedicated to Goddess Durga and stands beside Durga Kund, the water tank that gives the area its name. The temple and kund together make this a memorable spiritual stop in the city.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Durga%20Kund%20Temple.jpg?width=960",
-        alt: "Durga Kund Temple beside its water tank in Varanasi",
+        image: "/aarti-images/durga-kund-temple-varanasi.jpg",
+        alt: "Red Durga Kund Temple beside the sacred water tank in Varanasi, dedicated to Goddess Durga",
       },
       {
-        title: "Kal Bhairav Temple",
+        title: "Kal Bhairav Temple, Varanasi - Guardian of Kashi",
         description: "Kaal Bhairav is a revered form of Lord Shiva worshipped at this historic Varanasi shrine. In local tradition, he is regarded as the guardian of Kashi, making the temple an important part of the city’s spiritual circuit.",
-        image: "https://static.toiimg.com/photo/35111814/.jpg",
-        alt: "Kal Bhairav Temple in Varanasi",
+        image: "/aarti-images/kal%20bhairav%20temple-varanasi.jpg",
+        alt: "Lit diya at Kal Bhairav Temple in Varanasi, the guardian deity of Kashi",
       },
       {
-        title: "Ramnagar Fort",
+        title: "Ramnagar Fort, Varanasi",
         description: "Set beside the Ganga, Ramnagar Fort offers a glimpse into the history of the former Maharaja of Banaras. Explore its old halls and museum collections, then take in the broad river views from the fort’s riverside setting.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ramnagar%20Fort.jpg?width=960",
-        alt: "Ramnagar Fort in Varanasi",
+        image: "/aarti-images/Ramnagar%20Fort.jpg",
+        alt: "Historic Ramnagar Fort on the banks of the Ganga river, former residence of the Maharaja of Banaras",
       },
       {
-        title: "Sarnath",
+        title: "Sarnath Dhamek Stupa, Varanasi Buddhist Pilgrimage Site",
         description: "Just outside central Varanasi, Sarnath is one of Buddhism’s most significant pilgrimage sites. Visit the Dhamek Stupa and surrounding archaeological remains, where the Buddha is traditionally believed to have delivered his first sermon.",
-        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dhamek%20Stupa%20at%20Sarnath%20UP.jpg?width=960",
-        alt: "Dhamek Stupa at Sarnath near Varanasi",
+        image: "/aarti-images/sarnath%20temple.jpg",
+        alt: "Dhamek Stupa at Sarnath near Varanasi, where Buddha delivered his first sermon",
       },
     ],
     details: [
@@ -118,7 +118,6 @@ const serviceDetails = {
       {
         title: "Boat Planning for Aarti",
         description: "Ask us to plan a boat view of the Aarti. Boat availability, boarding point, and timing depend on the date and river conditions, so please enquire in advance.",
-        featured: true,
         image: "/aarti-images/ganga-aarti-boat-ride-varanasi.jpg",
         alt: "Tourists on a boat on the Ganges for Ganga Aarti view, Varanasi",
         imageTitle: "Boat Ride for Ganga Aarti Varanasi",
@@ -162,32 +161,32 @@ const serviceDetails = {
     note: "Consultations · By appointment",
     astrologyServices: [
       {
-        title: "Janm Kundli Nirman aur Vishleshan",
-        description: "We make your birth chart and explain what the planets in it mean, in the traditional way.",
+        title: "Janam Kundli Analysis",
+        description: "We prepare your birth chart and explain what each planet means for your life.\nYou get clear and simple guidance based on traditional astrology.",
       },
       {
         title: "Kundli Milan",
-        description: "We compare two birth charts and give gun milan advice for couples who may marry.",
+        description: "We compare the birth charts of two people who plan to marry.\nWe check the gun milan score and give helpful advice for a happy relationship.",
       },
       {
-        title: "Hast Rekha",
-        description: "We read the lines and shapes on your hand in the traditional way.",
+        title: "Palm Reading (Hast Rekha)",
+        description: "We study the lines and shapes on your hand in the traditional way.\nLearn what your palm may say about your character and future.",
       },
       {
-        title: "Ank Jyotish",
-        description: "We explain the traditional meaning of numbers and what they may say about you.",
+        title: "Numerology (Ank Jyotish)",
+        description: "We explain the meaning of your important numbers, like your birth date and name.\nSee what these numbers may say about your personality and path.",
       },
       {
-        title: "Vivah Badha Nivaran",
-        description: "Talk to an astrologer about possible delays or problems in your marriage.",
+        title: "Marriage Delay Solutions",
+        description: "Talk to an experienced astrologer if your marriage is late or facing problems.\nWe look at your chart to find possible reasons and suggest simple remedies.",
       },
       {
-        title: "Mangal Dosh Vichar aur Shanti",
-        description: "We check for Mangal dosh and talk about the usual shanti practices.",
+        title: "Mangal Dosh Check and Remedies",
+        description: "We check if your chart has Mangal Dosh and explain what it means.\nWe also share the common remedies and shanti practices people follow.",
       },
       {
-        title: "Santan Prapti Margdarshan",
-        description: "Traditional astrology advice about family and having children.",
+        title: "Child Planning Guidance",
+        description: "Get traditional astrology advice about family and having children.\nWe look at your chart and guide you on the right time and possible remedies.",
       },
     ],
     details: [
@@ -252,7 +251,7 @@ export default function ServiceDetail() {
             <h2 id="service-highlights-title">Choose your Ganga Aarti experience</h2>
             <div className="service-highlights__grid">
               {service.highlights.map((highlight) => (
-                <article className={`service-highlight${highlight.featured ? " service-highlight--featured" : ""}`} key={highlight.title}>
+                <article className="service-highlight" key={highlight.title}>
                   {highlight.image && (
                     <img
                       className={`service-highlight__image${highlight.title === "Dashashwamedh Ghat" ? " service-highlight__image--full" : ""}`}
@@ -290,12 +289,14 @@ export default function ServiceDetail() {
           </section>
         )}
         {service.astrologyServices && (
-          <section className="service-highlights service-astrology-services" aria-label="Available astrology services">
-            <div className="service-astrology-services__list">
+          <section className="service-puja-rituals" aria-label="Available astrology services">
+            <div className="service-puja-rituals__list">
               {service.astrologyServices.map((astrologyService) => (
-                <article className="service-astrology-service" key={astrologyService.title}>
-                  <h3>{astrologyService.title}</h3>
-                  <p>{astrologyService.description}</p>
+                <article className="service-puja-ritual" key={astrologyService.title}>
+                  <div>
+                    <h3>{astrologyService.title}</h3>
+                    <p>{astrologyService.description}</p>
+                  </div>
                 </article>
               ))}
             </div>

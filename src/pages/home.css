@@ -12,7 +12,7 @@
   overflow: hidden;
   isolation: isolate;
   border-radius: 0;
-  background: linear-gradient(125deg, #17354a, #315a6b 58%, #d96c17);
+  background: #fffaf5;
   color: #fff;
   box-shadow: 0 24px 60px rgb(20 42 56 / 18%);
 }
@@ -309,6 +309,7 @@
   border-color: #e6a46e;
   box-shadow: 0 14px 30px rgb(27 48 63 / 9%);
 }
+.home-service-card__icon { display: block; width: 42px; height: 42px; align-self: center; margin-bottom: 12px; object-fit: contain; }
 .home-service-card h3 { margin: 0 0 16px; color: #d96c17; font-size: 1.12rem; font-weight: 750; line-height: 1.35; text-align: center; }
 .home-service-card p { max-width: 34ch; color: #647586; font-size: 0.96rem; font-weight: 500; line-height: 1.7; text-align: left; }
 .home-reasons {
@@ -499,7 +500,7 @@
     height: clamp(280px, 47svh, 403px);
   }
 
-  .hero-slider__image { object-position: center; }
+  .hero-slider__image { object-position: 75% center; }
 
   .hero-slider__content {
     position: absolute;
@@ -601,6 +602,7 @@
   .home-service-card,
   .home-service-card:nth-child(4),
   .home-service-card:nth-child(5) { grid-column: 1 / -1; min-height: 0; padding: 17px; border-radius: 13px; }
+  .home-service-card__icon { width: 36px; height: 36px; margin-bottom: 9px; }
   .home-service-card h3 { font-size: 1rem; }
   .home-service-card p { font-size: 0.86rem; }
 

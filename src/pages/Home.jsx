@@ -10,30 +10,35 @@ const homeServices = [
     description:
       "Experience the evening prayers, glowing lamps, and music along the sacred Ganga.",
     id: "aarti-darshan",
+    icon: "/aarti-images/ganga-aarti-darshan.jpg",
   },
   {
     title: "Kashi Bhraman",
     description:
       "Explore the temples and ghats of Varanasi with help from people who know the city.",
     id: "kashi-darshan",
+    icon: "/aarti-images/kashi-bhraman.jpg",
   },
   {
     title: "Pandit & Puja Services",
     description:
       "Arrange traditional puja and ceremonies with an experienced local pandit.",
     id: "pandit-puja-services",
+    icon: "/aarti-images/pandit-puja-services.jpg",
   },
   {
     title: "Jyotish & Astrology",
     description:
       "Get personal guidance on your kundli, auspicious dates, and traditional remedies.",
     id: "jyotish-astrology",
+    icon: "/aarti-images/jyotish-astrology.jpg",
   },
   {
     title: "Ganga Aarti Event",
     description:
       "Plan a family gathering or religious event with local coordination from start to finish.",
     id: "event-planning",
+    icon: "/aarti-images/ganga-aarti-event.jpg",
   },
 ];
 
@@ -151,7 +156,6 @@ export default function Home() {
 
       <section className="home-services" aria-labelledby="home-services-title">
         <header className="home-services__heading">
-          <p className="home-about__eyebrow">Our Services</p>
           <h2 id="home-services-title">Plan Your Sacred Visit to Kashi</h2>
           <p>Plan your Ganga Aarti or Kashi visit with us.</p>
         </header>
@@ -162,6 +166,7 @@ export default function Home() {
               key={service.id}
               to={`/services/${service.id}`}
             >
+              <img className="home-service-card__icon" src={service.icon} alt="" aria-hidden="true" loading="lazy" />
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </Link>

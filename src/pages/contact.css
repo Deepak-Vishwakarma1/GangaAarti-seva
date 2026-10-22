@@ -413,9 +413,9 @@
   }
 
   .contact-card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 38px auto minmax(0, 1fr);
+    grid-template-rows: auto auto;
     align-items: center;
     gap: 5px 11px;
     min-height: 116px;
@@ -427,8 +427,8 @@
     height: 38px;
   }
 
-  .contact-card__label { margin: 0; }
-  .contact-card__hint { display: block; width: 100%; margin: 0 0 0 49px; }
+  .contact-card__label { grid-column: 2; grid-row: 1; margin: 0; }
+  .contact-card__hint { grid-column: 2 / 4; grid-row: 2; display: block; width: auto; margin: 0; }
 
   .contact-card strong {
     margin: 0;

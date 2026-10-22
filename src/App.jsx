@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import About from "./pages/About";
 import Footer from "./components/layout/Footer";
+import PageMetadata from "./components/shared/PageMetadata";
 import "./components/shared/whatsapp-button.css";
 
 const whatsAppLink = `https://wa.me/919794640037?text=${encodeURIComponent(
@@ -39,6 +40,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <PageMetadata />
       <TopBar />
       <Navbar />
       <Routes>

@@ -70,14 +70,15 @@
 .about-founder__copy h2 {
   margin-bottom: 8px;
   color: #17354a;
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 500;
   line-height: 1.2;
 }
 .about-founder__role {
   margin-bottom: 18px;
-  color: #d95e09;
-  font-size: 1.05rem;
-  font-weight: 700;
+  color: #667483;
+  font-size: 1rem;
+  font-weight: 400;
 }
 .about-founder__copy > p:last-child {
   color: #667483;
